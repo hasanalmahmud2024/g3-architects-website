@@ -6,6 +6,9 @@
 }
 
 /* shared styles */
+body {
+  margin: 0;
+}
 .display-flex {
   display: flex;
 }
@@ -42,6 +45,10 @@ main {
 main > section {
   margin-top: 130px;
 }
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
 /* header styles */
   /* navbar styles */
 .navbar {
@@ -57,7 +64,7 @@ main > section {
 }
 .nav-item {
   list-style: none;
-  /* margin-right: 30px; */
+  margin-right: 30px;
 }
 
 .nav-link {
@@ -67,8 +74,9 @@ main > section {
 
 .navbar,
 .banner {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
+
 }
 
   /* banner styles */
@@ -92,7 +100,7 @@ main > section {
 /* teams and feature related styles */
 .teams {
   align-items: center;
-  gap: 60px;
+  /* gap: 60px; */
 }
 .team-img-container {
   display: grid;
@@ -100,11 +108,8 @@ main > section {
   gap: 24px;
 }
 .our-features {
-  width: 600px;
-}
-.feature-title {
-  font-size: 3rem;
-  font-weight: 700;
+  margin-left: 100px;
+  max-width: 600px;
 }
 #text-quick-list {
   font-weight: 500;
@@ -114,11 +119,71 @@ main > section {
   
 }
 
+/* facts related styles */
+.facts-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  
+
+}
+
+.fact-card {
+  border: 1px solid #FF900E;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 240px;
+  height: 240px;
+  padding-top: 35px;
+
+}
+
+.fact-number {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 5px;
+
+}
+.fact-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 10px;
+
+}
+.fact-description {
+  max-width: 540px;
+}
 
 /* responsive media query */
 @media screen and (max-width: 576px) {
   .navbar,
-  .nav-links {
+  .nav-links,
+  .teams {
     flex-direction: column;
+  }
+  .team-img-container,
+  .facts-container {
+    grid-template-columns: 1fr;
+
+  }
+  .facts-container {
+    justify-items: center;
+    gap: 24px;
+  }
+  .our-features {
+    margin-left: 20px;
+  }
+}
+
+
+/* meadium devices style */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .teams {
+    flex-direction: column;
+  }
+  .our-features {
+    margin: 20px auto;
   }
 }
