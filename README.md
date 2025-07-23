@@ -1,4 +1,4 @@
-# g3-architect-website 
+# G3-Architect-website 
 
 HTML & CSS only landing page. It is responsive for small devices(max-width: 576px) and medium devices (max-width: 992px).
 
