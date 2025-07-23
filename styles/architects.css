@@ -157,6 +157,7 @@ main > section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
+  
 }
 
 .fact-card {
@@ -195,6 +196,7 @@ main > section {
 .sponsor-companies {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
 }
 .sponsor-companies img {
   filter: grayscale(100%);
