@@ -225,7 +225,8 @@ main > section {
   .sponsor-companies {
     grid-template-columns: 1fr;
   }
-  .facts-container {
+  .facts-container, 
+  .sponsor-companies {
     justify-items: center;
     gap: 24px;
   }
